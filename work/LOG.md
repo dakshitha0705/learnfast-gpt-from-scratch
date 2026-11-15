@@ -16,3 +16,8 @@ One entry per lesson: date, what was built, key numbers, what I learned.
 - Built `03_counts_to_probabilities.ipynb`: `prob()` (count / context count) and a `suggest_next()` autocomplete.
 - Key numbers: P(coffee | morning) = P(train | morning) = 0.125 (2/16). After 'the' → morning 0.103, weekend 0.088, park 0.074; after 'good' → book 0.6, coffee 0.4 (all match course exactly).
 - Learned: I learned that maximum likelihood is just "count the pair, divide by the context count". There's no training loop, and anything unseen gets exactly zero.
+
+## Lesson 4 — Make it write (2026-11-15)
+- Built `04_make_it_write.ipynb`: `generate()` samples word by word from `<s>` until `</s>`, for a bigram and a trigram (seeds 0–3).
+- Key numbers: bigram seed 0 → "he enjoys a good book make strong"; trigram seed 0 → "he enjoys a long walk on sunny weekends" (all 8 sentences match course exactly).
+- Learned: I learned that generation is the same sample → append → slide-window loop a GPT uses, and that the trigram's fluent text is mostly copied corpus phrases because its contexts are so sparse.
