@@ -26,3 +26,8 @@ One entry per lesson: date, what was built, key numbers, what I learned.
 - Built `05_zero_probability.ipynb`: `prob_mle()` vs add-k `prob_addk()` over a vocabulary of |V| = 170.
 - Key numbers: MLE P(coffee | drinks) = 0.0; add-1 P(coffee | drinks) = 0.00581 (1/172); add-1 P(green | drinks) = 0.01163 (2/172) (all match course exactly).
 - Learned: I learned that one unseen pair zeroes a whole sentence's probability, and add-k fixes it by adding k fake counts to every word, but add-1 takes far too much mass from the words actually seen.
+
+## Lesson 6 — How good is it? Perplexity (2026-11-15)
+- Built `06_perplexity.ipynb`: an 80/20 shuffled split (seed 0, 48 train / 12 test) and add-1 `perplexity()` for bigram and trigram.
+- Key numbers: bigram train 52.7 / held-out 94.1; trigram train 60.6 / held-out 115.8 (match course exactly).
+- Learned: I learned that perplexity is exp(average negative log-prob) and only means something on held-out text. Here the trigram writes nicer text but scores worse, because 48 sentences are far too few to estimate two-word contexts.
