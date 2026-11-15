@@ -21,3 +21,8 @@ One entry per lesson: date, what was built, key numbers, what I learned.
 - Built `04_make_it_write.ipynb`: `generate()` samples word by word from `<s>` until `</s>`, for a bigram and a trigram (seeds 0–3).
 - Key numbers: bigram seed 0 → "he enjoys a good book make strong"; trigram seed 0 → "he enjoys a long walk on sunny weekends" (all 8 sentences match course exactly).
 - Learned: I learned that generation is the same sample → append → slide-window loop a GPT uses, and that the trigram's fluent text is mostly copied corpus phrases because its contexts are so sparse.
+
+## Lesson 5 — The zero-probability problem (2026-11-15)
+- Built `05_zero_probability.ipynb`: `prob_mle()` vs add-k `prob_addk()` over a vocabulary of |V| = 170.
+- Key numbers: MLE P(coffee | drinks) = 0.0; add-1 P(coffee | drinks) = 0.00581 (1/172); add-1 P(green | drinks) = 0.01163 (2/172) (all match course exactly).
+- Learned: I learned that one unseen pair zeroes a whole sentence's probability, and add-k fixes it by adding k fake counts to every word, but add-1 takes far too much mass from the words actually seen.
