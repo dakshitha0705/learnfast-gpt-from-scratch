@@ -9,7 +9,7 @@ text — wrapped into a reusable `NgramLM`.
 | # | Lesson | Status | Notebook |
 |---|--------|--------|----------|
 | 1 | What a language model is | ✅ | 01_what_is_lm.ipynb |
-| 2 | Count the n-grams | ⬜ | 02_count_ngrams.ipynb |
+| 2 | Count the n-grams | ✅ | 02_count_ngrams.ipynb |
 | 3 | Counts to probabilities (MLE) | ⬜ | 03_counts_to_probabilities.ipynb |
 | 4 | Make it write | ⬜ | 04_make_it_write.ipynb |
 | 5 | The zero-probability problem | ⬜ | 05_zero_probability.ipynb |
