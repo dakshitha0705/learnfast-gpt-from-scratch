@@ -31,3 +31,8 @@ One entry per lesson: date, what was built, key numbers, what I learned.
 - Built `06_perplexity.ipynb`: an 80/20 shuffled split (seed 0, 48 train / 12 test) and add-1 `perplexity()` for bigram and trigram.
 - Key numbers: bigram train 52.7 / held-out 94.1; trigram train 60.6 / held-out 115.8 (match course exactly).
 - Learned: I learned that perplexity is exp(average negative log-prob) and only means something on held-out text. Here the trigram writes nicer text but scores worse, because 48 sentences are far too few to estimate two-word contexts.
+
+## Lesson 7 — Ship your predictive-text engine (2026-11-15)
+- Built `07_ship_engine.ipynb` and the reusable `ngram_lm.py` (`to_sentences`, `to_tokens`, `build`, `NgramLM` with fit / suggest_next / generate / perplexity, add-k k=0.5). Portfolio project deliberately left for later.
+- Key numbers: 'i drink' → [coffee, tea]; 'the morning' → [train, coffee, before]; 'on the' → [morning, weekend, park]; 'she reads a' → [good, book, film]; generate(seed=3) → "the quiet and coffee" (notebook and `python ngram_lm.py` both match course exactly).
+- Learned: I learned that a whole language model fits behind fit → suggest / generate / score, the same interface as any ML model, and that the class is literally Lessons 2–6 packaged together.
